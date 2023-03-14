@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+ul {
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:focus {
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 5rem;
+  background-color: rgb(68, 83, 78);
+  position: relative;
+}
+
+.form-container {
+  margin-bottom: 4rem;
+}
+
+.form-container form  {
+ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-control input[type='text'] {
+  height: 3rem;
+  padding: .5rem;
+  width: 30rem;
+  text-transform: capitalize;
+  margin-right: 1rem;
+  box-shadow: .5rem 1rem 3rem rgb(67, 64, 64);
+  outline: none;
+  border: 0;
+  border-radius: .3rem;
+}
+
+input[type='checkbox'] {
+  margin-right: 1rem;
+}
+
+button {
+  width: 10rem;
+  height: 3rem;
+}
+
+.list {
+  width: 25rem;
+}
+
+.list li {
+  margin: .5rem 0;
+  font-size: 1.7rem;
+  padding: .7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(79, 79, 116);
+  box-shadow: .5rem 1rem 3rem rgb(67, 64, 64);
+}
+.btn-dlt {
+  color: rgb(185, 116, 116);
+}
+.btn-edit {
+  color: rgb(51, 51, 127);
+}
+p {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.line-through {
+   text-decoration: line-through;
+}
+
+.alert {
+  width: 15rem;
+  padding: .5rem;
+  margin-bottom: .5rem;
+  border-radius: .3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.success {
+  background-color: rgb(88, 146, 88);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.danger {
+  background-color: rgb(180, 96, 96);
+}
+
+.btn-clear {
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: rgb(104, 52, 52);
+}
+
+.btn-submit {
+  background-color: rgb(53, 129, 53);
+  border: 0;
+  outline: none;
+  box-shadow: .5rem 1rem 3rem rgb(67, 64, 64);
+  color: aliceblue;
+  border-radius: .3rem;
 }
